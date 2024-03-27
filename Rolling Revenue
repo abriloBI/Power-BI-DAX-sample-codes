@@ -1,0 +1,10 @@
+10-day Rolling Revenue = 
+CALCULATE(
+    [Total Revenue],  -- Measure representing total revenue
+    DATESINPERIOD(
+        'Calendar'[Date],  -- Date column to be evaluated
+        MAX('Calendar'[Date]),  -- The maximum date in the current context
+        -10,  -- Rolling period of 10 days
+        DAY  -- The granularity of the period (in this case, per day)
+    )
+)
