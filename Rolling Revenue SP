@@ -4,14 +4,14 @@ BEGIN
     SET NOCOUNT ON;
 
     SELECT 
-        DateColumn,
+        Date,
         SUM(Revenue) AS TotalRevenue
     FROM 
-        YourSalesTable
+        Sales
     WHERE
-        DateColumn BETWEEN DATEADD(DAY, -10, GETDATE()) AND GETDATE()
+        Date BETWEEN DATEADD(DAY, -10, GETDATE()) AND GETDATE()
     GROUP BY
-        DateColumn
+        Date
     ORDER BY
-        DateColumn;
+        Date;
 END
