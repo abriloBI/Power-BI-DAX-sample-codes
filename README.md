@@ -1,1 +1,1 @@
-This repository demonstrates the implementation of a 10-day rolling revenue calculation using DAX in Power BI. The calculation utilizes the CALCULATE and DATESINPERIOD functions to dynamically compute the total revenue over a sliding 10-day window, providing insights into short-term revenue trends.
+This repository showcases advanced analytics capabilities by implementing a 10-day rolling revenue calculation using DAX in Power BI alongside a companion stored procedure written in T-SQL.
