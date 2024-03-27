@@ -1,0 +1,17 @@
+CREATE PROCEDURE GetRollingRevenue
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        DateColumn,
+        SUM(Revenue) AS TotalRevenue
+    FROM 
+        YourSalesTable
+    WHERE
+        DateColumn BETWEEN DATEADD(DAY, -10, GETDATE()) AND GETDATE()
+    GROUP BY
+        DateColumn
+    ORDER BY
+        DateColumn;
+END
