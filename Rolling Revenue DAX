@@ -1,6 +1,8 @@
+Total Revenue = SUM('Sales'[Revenue]) -- Measure representing total revenue
+
 10-day Rolling Revenue = 
 CALCULATE(
-    [Total Revenue],  -- Measure representing total revenue
+    [Total Revenue],  
     DATESINPERIOD(
         'Calendar'[Date],  -- Date column to be evaluated
         MAX('Calendar'[Date]),  -- The maximum date in the current context
